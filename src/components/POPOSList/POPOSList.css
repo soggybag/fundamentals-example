@@ -1,0 +1,68 @@
+
+/* Large screens desktop */
+.POPOSList {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 2em;
+	max-width: 1200px;
+	margin: auto;
+	padding: 2em;
+} 
+
+/* Smaller screens and tablets */
+@media only screen and (max-width: 960px) {
+	.POPOSList {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+/* Small screens mobile */
+@media only screen and (max-width: 700px) {
+	.POPOSList {
+		grid-template-columns: 1fr;
+	}
+}
+
+.POPOSList form {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.POPOSList form > div:first {
+	display: flex;
+	align-items: flex-start;
+}
+
+.POPOSList-checkboxes label {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.POPOSList-checkboxes input { 
+	margin: 1em 0.5em;
+}
+
+.POPOSList-search input, .POPOSList-search button {
+	padding: 0.5em;
+	margin: 0;
+	border: 1px solid;
+	font-size: 1;
+}
+
+.POPOSList-search {
+	display: flex;
+}
+
+.POPOSList-search input {
+	flex: 1;
+	border-top-left-radius: 0.5em;
+	border-bottom-left-radius: 0.5em;
+}
+
+.POPOSList-search button {
+	border-top-right-radius: 0.5em;
+	border-bottom-right-radius: 0.5em;
+}
+

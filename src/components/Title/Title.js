@@ -1,13 +1,17 @@
-import React from 'react'
+import { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import './Title.css';
 import RandomSpace from '../RandomSpace/RandomSpace'
 
+import CounterButtons from '../CounterButtons'
+import { CounterContext } from '../CounterProvider'
+
 function Title() {
+  const [count] = useContext(CounterContext)
   return (
     <div className="Title">
       <header>
-        <h1>SFPOPOS</h1>
+        <h1>SFPOPOS {count}</h1>
         <div className="Title-Subtitle">San Francisco Privately Owned Public Open Spaces</div>
 
         <div>
@@ -23,6 +27,7 @@ function Title() {
 						to="/about">About</NavLink>
 
           <RandomSpace />
+          <CounterButtons />
         </div>
 
       </header>
